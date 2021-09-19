@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>CodePen - Employee Account | Form Wizard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel='stylesheet'
+		href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,500'>
+	<link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+	<!-- partial:index.partial.html -->
+	<section class="form-box">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-sm-10 col-lg-10 form-wizard">
+
+					<!-- Form Wizard -->
+					<form role="form" action="" method="post">
+
+						<h3>Chocolate configurator</h3>
+						<!-- Form progress -->
+						<div class="form-wizard-steps form-wizard-tolal-steps-4">
+							<div class="form-wizard-progress">
+								<div class="form-wizard-progress-line" data-now-value="12.25" data-number-of-steps="4"
+									style="width: 12.25%;"></div>
+							</div>
+							<!-- Step 1 -->
+							<div class="form-wizard-step active">
+								<div class="form-wizard-step-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
+								<p>Customize FrischSchoggi</p>
+							</div>
+							<!-- Step 1 -->
+
+							<!-- Step 2 -->
+							<div class="form-wizard-step">
+								<div class="form-wizard-step-icon"><i class="fa fa-envelope-open-o"
+										aria-hidden="true"></i></div>
+								<p>Individual message</p>
+							</div>
+							<!-- Step 2 -->
+
+							<!-- Step 3 -->
+							<div class="form-wizard-step">
+								<div class="form-wizard-step-icon"><i class="fa fa-truck" aria-hidden="true"></i></div>
+								<p>Delivery</p>
+							</div>
+							<!-- Step 3 -->
+
+							<!-- Step 4 -->
+							<div class="form-wizard-step">
+								<div class="form-wizard-step-icon"><i class="fa fa-check-circle-o"
+										aria-hidden="true"></i></div>
+								<p>Confirm order</p>
+							</div>
+							<!-- Step 4 -->
+						</div>
+						<!-- Form progress -->
+
+
+						<!-- Form Step 1 -->
+						<fieldset>
+
+							<h4 class="title">Which chocolate would you like?</h4>
+							<div class="form-group cocolate-types">
+								<label>
+									<input type="radio" value="10" name="cocolate_type" onchange="handleCocolateType(this);">
+									<img src="img/milk-cocolate.png" />
+									<span>Milk Cocolate</span>
+								</label>
+								<label>
+									<input type="radio" value="12" name="cocolate_type" onchange="handleCocolateType(this);">
+									<img src="img/dark-cocolate.png" />
+									<span>Dark Cocolate</span>
+								</label>
+								<label>
+									<input type="radio" value="14" name="cocolate_type" onchange="handleCocolateType(this);">
+									<img src="img/white-cocolate.png" />
+									<span>White Cocolate</span>
+								</label>
+
+							</div>
+							<h4 class="form">What shape and size do you want?</h4>
+							<div class="form-group cocolate-shapes">
+								<label>
+									<input type="radio" value="15" name="cocolate_shape" onchange="handleCocolateShape(this);">
+									<img src="img/shape-1.png" class="shape-lg"/>
+									<span>Large heart for CHF 42.90 (ca. 25 x 25cm)</span>
+								</label>
+								<label>
+									<input type="radio" value="10" name="cocolate_shape" onchange="handleCocolateShape(this);">
+									<img src="img/shape-2.png" class="shape-sm"/>
+									<span>Small heart for CHF 19.90 (ca. 15 x 18cm)</span>
+								</label>
+								<label>
+									<input type="radio" value="15" name="cocolate_shape" onchange="handleCocolateShape(this);">
+									<img src="img/shape-3.png" class="shape-lg"/>
+									<span>Large plate for CHF 66.00 (ca. 28 x 33cm)</span>
+								</label>
+								<label>
+									<input type="radio" value="10" name="cocolate_shape" onchange="handleCocolateShape(this);">
+									<img src="img/shape-4.png" class="shape-sm"/>
+									<span>Small plate for CHF 28.50 (ca. 12 x 23cm)</span>
+								</label>
+
+							</div>
+							<h4 class="form">Which ingredients would you like in your FrischSchoggi ™?</h4>
+							<p> (recommend a maximum of 3 - if you do not select any ingredients, we will make the
+								chocolate pure for you.)</p>
+							<div class="form-group cocolate-ingredients">
+								<label>
+									<input type="checkbox" value="200" name="cocolate_ingredients"  onchange="handleIngredients(this);">
+									<img src="img/ingredients-1.png" />
+									<span>Caramelised hazelnuts</span>
+								</label>
+								<label>
+									<input type="checkbox" value="190" name="cocolate_ingredients" onchange="handleIngredients(this);">
+									<img src="img/ingredients-2.png" />
+									<span>Caramelised hazelnuts</span>
+								</label>
+
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients"  onchange="handleIngredients(this);">
+									<img src="img/ingredients-3.png" />
+									<span>Finest caramel crunch</span>
+								</label>
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients"  onchange="handleIngredients(this);">
+									<img src="img/ingredients-4.png" />
+									<span>Crunchy Cornflakes</span>
+								</label>
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients"  onchange="handleIngredients(this);">
+									<img src="img/ingredients-5.png" />
+									<span>Fruity cranberries</span>
+								</label>
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients"  onchange="handleIngredients(this);">
+									<img src="img/ingredients-6.png" />
+									<span>Crispy pistachios</span>
+								</label>
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients"  onchange="handleIngredients(this);">
+									<img src="img/ingredients-7.png" />
+									<span>Caramelised hazelnuts</span>
+								</label>
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients" onchange="handleIngredients(this);">
+									<img src="img/ingredients-8.png" />
+									<span>Finest coconut flakes</span>
+								</label>
+								<label>
+									<input type="checkbox" value="1" name="cocolate_ingredients" onchange="handleIngredients(this);">
+									<img src="img/ingredients-9.png" />
+									<span>Colourful chocolate lentils</span>
+								</label>
+
+							</div>
+
+							<div class="form-wizard-buttons">
+								<button type="button" class="btn btn-next">Next <i
+										class="ml-2 fa fa-chevron-right"></i></button>
+							</div>
+						</fieldset>
+						<!-- Form Step 1 -->
+
+						<!-- Form Step 2 -->
+						<fieldset>
+
+							<h4>Do you want to add individual message?</h4>
+							<div class="form-group">
+								<label>
+
+									<input type="radio" name="individual_msg" id="individualMsgYes" onclick="showIndvidualMsgBox(this)" value="87">
+									Yes
+								</label>
+								<label class="ml-2">
+
+									<input type="radio" name="individual_msg" id="individualMsgNo" onclick="showIndvidualMsgBox(this)" value="no" checked>
+									No
+								</label>
+							</div>
+							<div class="individualMsgTrue" id="individualMsgBox" style="display: none;">
+								<p>Labelling only possible in combination with your own FrischSchoggi™. You will find
+									already labelled FrischSchoggi™ hearts from our standard assortment in <a
+										href="#"></a>unserem Online Shop.</a></p>
+								<p class="text-primary-color">
+									Our Confiseure label according to your text specifications:
+								</p>
+								<img src="img/individual-msg.png" alt="Individual Message" style="width: 140px;" />
+								<p>Lid "Heart - large" for CHF 11.50 (115g | 45 characters): This lid is made of white
+									chocolate and is fixed to your FrischSchoggi™ heart with a drop of chocolate.</p>
+								<label>
+									<span class="float-left w-100">Your desired text on the "Heart - large":</span>
+									<input type="text" name="individual_msg" id="individualMsg" placeholder="Max 45" class="form-control">
+								</label>
+							</div>
+
+
+							<div class="form-wizard-buttons">
+								<button type="button" class="btn btn-previous"><i class="mr-2 fa fa-chevron-left"></i>
+									Previous step</button>
+								<button type="button" class="btn btn-next">Next step <i
+										class="ml-2 fa fa-chevron-right"></i></button>
+							</div>
+						</fieldset>
+						<!-- Form Step 2 -->
+
+						<!-- Form Step 3 -->
+						<fieldset>
+
+							<h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat duis felis, sit. Id
+								urna.</h4>
+							<div class="form-group">
+								<label>
+									<input type="radio" name="individual_msg" id="delivery" value="delivery">
+									Delivery
+								</label>
+								<label class="ml-2">
+									<input type="radio" name="individual_msg" id="pickUp" value="pickup" checked>
+									Pick-Ups
+								</label>
+							</div>
+							<div class="select-delivery">
+								<p>
+									Please proceed to checkout to input your billing and shipping details for delivery.
+								</p>
+							</div>
+							<div class="select-pickup">
+								<label>
+									Choose Date
+									<input type="date" name="pickup_date" class="form-control">
+								</label>
+								<label>
+									Choose times
+									<input type="time" name="pickup_time" class="form-control">
+								</label>
+							</div>
+
+							<br />
+							<div class="form-wizard-buttons">
+								<button type="button" class="btn btn-previous">Previous</button>
+								<button type="button" class="btn btn-next">Add To Cart</button>
+							</div>
+						</fieldset>
+						<!-- Form Step 3 -->
+
+						<!-- Form Step 4 -->
+						<fieldset>
+
+							<h4>Selected chocolate</h4>
+							<div style="clear:both;"></div>
+							<label>
+								<img src="img/milk-cocolate.png">
+								<span>Milk Cocolate</span>
+							</label>
+							<div style="clear:both;"></div>
+							<h4>Selected shape</h4>
+							<div style="clear:both;"></div>
+							<label>
+								<img src="img/shape-1.png" class="shape-lg">
+								<span>Large heart for CHF 42.90 (ca. 25 x 25cm)</span>
+							</label>
+							<div style="clear:both;"></div>
+							<h4>Selected ingredients</h4>
+							<label>
+								<img src="img/ingredients-1.png" class="shape-sm">
+								<span>Caramelised hazelnuts</span>
+							</label>
+							<label>
+								<img src="img/ingredients-2.png">
+								<span>Caramelised hazelnuts</span>
+							</label>
+
+							<label>
+								<img src="img/ingredients-3.png">
+								<span>Finest caramel crunch</span>
+							</label>
+							<br />
+							<div class="form-wizard-buttons">
+								<button type="button" class="btn btn-previous">Previous</button>
+								<button type="submit" class="btn btn-submit">Submit</button>
+							</div>
+						</fieldset>
+						<!-- Form Step 4 -->
+
+					</form>
+					<!-- Form Wizard -->
+				</div>
+				<div class="col-lg-2 col-md-2">
+					<div class="cart-item-box-fixed">
+						<div class="cart-item-box">
+							<div class="row">
+								<div class="col-lg-6 col-md-6">
+									<span id="cartCocolateTypeTxt"></span>
+								</div>
+								<div class="col-lg-6 col-md-6">
+									<strong><span id="cartCocolateTypePrice"></span></strong>
+								</div>
+
+								<div class="col-lg-6 col-md-6">
+									<span id="cartCocolateShapeTxt"></span>
+								</div>
+								<div class="col-lg-6 col-md-6"><strong>
+									<span id="cartCocolateShapePrice"></span>
+								</strong></div>
+
+								<div class="col-lg-6 col-md-6">
+									<span id="cartIngredientsTxt"></span>
+								</div>
+								<div class="col-lg-6 col-md-6"><strong>
+									<span id="cartIngredientsPrice"></span>
+								</strong></div>
+
+								<div class="col-lg-6 col-md-6">
+									<span id="individualMsgTxt"></span>
+								</div>
+								<div class="col-lg-6 col-md-6"><strong>
+									<span id="individualMsgPrice"></span>
+								</strong></div>
+
+							</div>
+
+							<div class="row total">
+								<div class="col-lg-6 col-md-6">
+									<span>Total</span>
+								</div>
+								<div class="col-lg-6 col-md-6"><strong>CHF 142</strong></div>
+							</div>
+
+						</div>
+						<a href="#" title="#" class="btn btn-default btn-md">Contact Us</a>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+	</section>
+	<!-- partial -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/js/bootstrap.min.js'></script>
+	<script src="./script.js"></script>
+
+</body>
+
+</html>
