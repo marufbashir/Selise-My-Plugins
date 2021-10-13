@@ -1,0 +1,61 @@
+.total-result-text{
+    float: left;
+    margin-top: 16px;
+    margin-right: 10px;
+
+}
+.pagination-form{
+    float: left;
+    margin-top: 10px;
+    margin-left: 10px !important;
+    margin-right: 10px;
+    width: auto;
+}
+.download-btn{
+    margin-top: 10px !important;
+    float: left !important;
+}
+.action-div{
+    width: 100%;
+    float: left;
+    clear: both;
+    margin: 10px 0;
+}
+#holSalesReportFilterForm{
+    width: 140%;
+    float: left;
+}
+/* 
+#holSalesReportFilterForm input,#holSalesReportFilterForm select{
+    float: left;
+} */
+.col-md-3{
+    float: left;
+    width: auto;
+    padding-right: 20px;
+    
+}
+.col-md-3 label{
+    width: 100%;
+    float: left;
+    
+}
+.col-md-3 input,.col-md-3 select{
+    width: 100%;
+    float: left;
+    height: 35px;
+    
+}
+.status-paid{
+    color: green;
+}
+.status-unpaid{
+    color: red;
+}
+.notice.elementor-message{
+    display: none;
+}
+.sortableItem{
+    color: #135e96;
+    cursor: pointer;
+}
